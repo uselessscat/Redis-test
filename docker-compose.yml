@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  node:
+    image: node:10.16.3-buster
+    volumes:
+      - ./src:/src
+    working_dir: /src
+    ports:
+      - 3005:3000
+    networks:
+      redis_test:
+        aliases:
+          - node
+    command: ["app.js"]
+  redis:
+    image: redis:5.0.5-buster
+    networks:
+      redis_test:
+        aliases:
+          - redis
+networks:
+  redis_test:
