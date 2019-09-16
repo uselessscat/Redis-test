@@ -1,5 +1,5 @@
 
-# Tutorial
+# Prueba Redis
 
 ## Iniciar el proyecto
 Para inicializar el proyecto usar:
